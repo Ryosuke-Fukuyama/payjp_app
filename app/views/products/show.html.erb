@@ -20,5 +20,13 @@
   <%= @product.note %>
 </p>
 
+<%= form_tag(action: :pay, method: :post) do %>
+  <script type="text/javascript"
+    src="https://checkout.pay.jp"
+    class="payjp-button"
+    data-key="pk_test_6e122b3d1a67631de0c3d5e7">
+  </script>
+<% end %>
+
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
